@@ -1,0 +1,65 @@
+//a.Get all the countries from Asia continent /region using Filter function
+    const asia=data.filter((element)=>{
+        if(element.region==='Asia'){
+            return element.name;
+        }
+    })
+    console.log("Get all the countries from Asia continent /region using Filter function");
+    console.log(asia);
+
+
+
+
+
+//b.Get all the countries with population of less than 2 lacs using Filter function
+
+
+    
+    const popu=data.filter((element)=>{
+        return element.population<200000;
+    })
+    console.log("Get all the countries with population of less than 2 lacs using Filter function");
+    console.log(popu);
+
+
+
+
+
+//c.Print the following details name, capital, flag using forEach function.
+    console.log("Print the following details name, capital, flag using forEach function");
+    data.forEach((element)=>{
+        console.log(element.name,element.capital,element.flag);
+    })
+
+
+
+
+
+//d.Print the total population of countries using reduce function 
+    console.log("Print the total population of countries using reduce function ");
+    const population=data.reduce((acc,element)=>{
+        return acc+element.population;
+    },0)
+    console.log(population);
+
+
+
+
+
+
+//e.Print the country which use US Dollars as currency.
+
+    console.log("Print the country which use US Dollars as currency. ");
+     var cur=[];
+        for(i=0;i<data.length;i++)
+     {
+        for(o in data[i].currencies)
+        {
+            if(o =="USD")
+            {
+                console.log(data[i]);
+            }
+            
+        }
+
+    }
